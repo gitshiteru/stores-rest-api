@@ -1,6 +1,6 @@
-! REST API python examples
+# REST API python examples
 
-!!  Installation
+##  Installation
 
 ```
 pip install Flask
@@ -8,9 +8,9 @@ python app.py
 
 ```
 
-!! Description
+## Description
 
 
-!! Implementation
+## Implementation
 
 This project is implemented using Flask, and is a REST API for a store.`
