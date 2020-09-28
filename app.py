@@ -17,7 +17,7 @@
 #  And that is a decorator that we are going to call in front of our get method.
 
 
-
+import os
 from flask import Flask
 # JWT: JSON Web Token, encoding data
 #Resouce is represent to a schema or a data set that Api returns
@@ -31,7 +31,8 @@ from resources.store import Store, StoreList
 
 app = Flask(__name__)
 #tell sqlalchemy where to find data.db file
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
 #Use better sqlalchemy modification tracker
 #U than flask_sqlalckemy one.
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
